@@ -49,7 +49,7 @@ a {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0%;
     justify-content: space-around !important;
@@ -88,7 +88,7 @@ header button {
 
 #main {
     height: calc(100vh + 130px);
-    width: 100vw;
+    min-width: 100vw;
     z-index: -1;
     text-align: center;
     color: #EEEEEE;
@@ -97,14 +97,18 @@ header button {
     margin-top: -130px;
 }
 
-#main img {
+.main-img {
     position: absolute;
-    margin-top: -130px;
-    min-width: 100vw;
     top: 0%;
-    z-index: -1;
+    left: 0%;
+    width: 100vw;
+    height: calc(100vh + 130px);
+    background-image: url("./Imagens/main.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     filter: brightness(.6);
-    min-height: 100vh;
+    z-index: -2;
     animation: main-img 1.2s ease-out 1;
 }
 
@@ -122,7 +126,7 @@ header button {
     }
 }
 
-#main label {
+#main p {
     font-size: 30px;
     margin-top: 30px;
 }
@@ -130,6 +134,7 @@ header button {
 #main h1 {
     font-family: Playfair;
     font-weight: lighter;
+    line-height: 80px;
     margin: 0%;
     margin-top: -23px;
 }
@@ -137,7 +142,7 @@ header button {
 #main button {
     padding: 10px 40px;
     font-size: 16px;
-    margin: 0px 15px;
+    margin: 30px 15px;
 }
 
 #main button:nth-child(1) {
@@ -192,11 +197,35 @@ header button {
     flex-wrap: nowrap;
 }
 
-.suites img {
+.suites .suite1 {
     max-width: 90vw;
     min-width: 50vw;
+    height: 600px;
+    background-image: url("./Imagens/suite1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
+.suites .suite2 {
+    max-width: 90vw;
+    min-width: 50vw;
+    height: 600px;
+    background-image: url("./Imagens/suite2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.suites .suite3 {
+    max-width: 90vw;
+    min-width: 50vw;
+    height: 600px;
+    background-image: url("./Imagens/suite3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 .suites p,
 h3 {
@@ -253,6 +282,7 @@ h3 {
     height: 150px;
     margin: -75px auto 0px auto;
     text-align: center;
+    max-width: 60vw;
 }
 
 .suitesActive {
@@ -267,6 +297,14 @@ h3 {
     background-color: #EEEEEE;
     padding: 100px 0px;
     text-align: left;
+    flex-wrap: wrap-reverse;
+}
+
+#o-motel button {
+    padding: 10px 40px;
+    font-size: 16px;
+    margin-left: 30px;
+    background-color: var(--marron-escuro);
 }
 
 #o-motel h2 {
@@ -277,7 +315,7 @@ h3 {
 #o-motel p,
 h2 {
     margin: 30px;
-    font-size: 20px;
+    font-size: 17px;
     color: var(--marron-escuro);
 }
 
@@ -285,15 +323,21 @@ h2 {
     width: 500px;
     height: 500px;
     background-color: #FFFFFF;
+    padding-bottom: 20px;
     -webkit-box-shadow: 12px 10px 25px 0px rgba(0, 0, 0, 0.45);
     -moz-box-shadow: 12px 10px 25px 0px rgba(0, 0, 0, 0.45);
     box-shadow: 12px 10px 25px 0px rgba(0, 0, 0, 0.45);
 }
 
-#o-motel img {
+#o-motel div:nth-child(2) {
     width: 500px;
     height: 500px;
     margin-bottom: 90px;
+    max-width: 100vw;
+    background-image: url("./Imagens/suite4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #cortesias-container {
@@ -382,6 +426,7 @@ h2 {
     background-color: #FFFFFF;
     text-align: center;
     font-size: 20px;
+    padding: 50px 0px;
 }
 
 #localizacao div {
@@ -402,18 +447,18 @@ h2 {
 
 #localizacao iframe {
     width: 900px;
-    max-width: 98vw;
+    max-width: 90vw;
     height: 400px;
 }
 
-#pre-footer {
+#pre-footerMobile {
     background-color: #2A2A2A;
-    justify-content: space-evenly;
     color: aliceblue;
     padding: 70px 0px;
+    display: none;
 }
 
-#pre-footer h2 {
+#pre-footerMobile h2 {
     font-family: Playfair;
     font-weight: lighter;
     line-height: 50px;
@@ -422,15 +467,51 @@ h2 {
     font-size: 60px;
 }
 
-#pre-footer h2:nth-child(2) {
+#pre-footerMobile hr {
+    width: 80vw;
+}
+
+#pre-footerMobile button {
+    margin: 20px;
+    width: 80vw;
+    height: 60px;
+    font-size: 20px;
+}
+
+.footerBotao1 {
+    background-color: var(--marron-claro);
+}
+
+.footerBotao2 {
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+#pre-footerDesktop {
+    background-color: #2A2A2A;
+    justify-content: space-evenly;
+    color: aliceblue;
+    padding: 70px 0px;
+}
+
+#pre-footerDesktop h2 {
+    font-family: Playfair;
+    font-weight: lighter;
+    line-height: 50px;
+    color: #FFFFFF;
+    margin: 0%;
+    font-size: 60px;
+}
+
+#pre-footerDesktop h2:nth-child(2) {
     letter-spacing: 10px;
 }
 
-#pre-footer div:nth-child(1) p {
+#pre-footerDesktop div:nth-child(1) p {
     font-size: 12px;
 }
 
-#pre-footer div:nth-child(4) {
+#pre-footerDesktop div:nth-child(4) {
     align-items: flex-start;
 }
 
@@ -442,12 +523,218 @@ footer {
     padding: 15px 0px;
 }
 
+#header-mobile {
+    display: none;
+    height: 100px;
+    position: absolute;
+    top: calc(100vh - 100px);
+    background-color: #2A2A2A;
+    justify-content: center;
+    z-index: 3;
+}
+
+#header-mobile button {
+    padding: 20px 40px;
+    font-size: 16px;
+    margin: 15px;
+    background-color: var(--marron-claro);
+}
+
+#header-mobile h2 {
+    font-family: Playfair;
+    font-weight: lighter;
+    line-height: 31px;
+    color: #FFFFFF;
+    margin: 0%;
+    font-size: 40px;
+}
+
+#header-mobile h2:nth-child(2) {
+    letter-spacing: 4px;
+    font-weight: lighter;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #FFFFFF;
+
+    transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+#sidebar-mobile {
+    position: fixed;
+    width: 70vw;
+    left: -70vw;
+    height: 100vh;
+    background-color: var(--marron-claro);
+    z-index: 3;
+    color: #FFFFFF;
+    transition: .5s;
+}
+
+#sidebar-mobile h2 {
+    font-family: Playfair;
+    font-weight: lighter;
+    line-height: 31px;
+    margin: 15px;
+    font-size: 60px;
+    color: #FFFFFF;
+}
+
+#sidebar-mobile h2:nth-child(2) {
+    letter-spacing: 5px;
+}
+
+#sidebar-mobile a {
+    margin: 10px;
+    font-size: 24px;
+}
+
+.open {
+    left: 0vw !important;
+}
+
 @media screen and (max-width: 900px) {
-    #pre-footer {
+    #pre-footerDesktop {
         flex-direction: column;
     }
 
-    #pre-footer div:nth-child(4) {
+    #pre-footerDesktop div:nth-child(4) {
         align-items: center;
+    }
+
+    #o-motel {
+        padding: 0%;
+    }
+
+    #o-motel div:nth-child(1) {
+        width: 80vw;
+        transform: translate(0px, -30px);
+    }
+
+    #o-motel p {
+        font-size: 14px;
+    }
+
+    #o-motel div:nth-child(2) {
+        margin-bottom: 0%;
+        height: 300px;
+    }
+
+    #localizacao div {
+        padding: 40px 0px;
+    }
+
+    .suites .suite1 {
+        min-width: 88vw;
+    }
+
+    .suites .suite2 {
+        min-width: 88vw;
+    }
+
+    .suites .suite3 {
+        min-width: 88vw;
+    }
+
+    .sub-container-suites {
+        font-size: 14px;
+    }
+
+    .sub-container-suites>div {
+        flex-direction: column;
+    }
+
+    .sub-container-suites button {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    #pre-footerDesktop {
+        display: none;
+    }
+
+    #pre-footerMobile {
+        display: flex;
+    }
+
+    header {
+        display: none !important;
+    }
+
+    #main {
+        margin-top: 0px;
+        height: 100vh;
+    }
+
+    #main div:nth-child(2) {
+        margin-top: 0px;
+    }
+
+    #main button:nth-child(1) {
+        margin-bottom: 100px;
+    }
+
+    #main button:nth-child(2) {
+        margin-bottom: 100px;
+    }
+
+    #header-mobile {
+        display: flex;
+    }
+
+    #cortesias>div {
+        min-width: 88vw;
     }
 }

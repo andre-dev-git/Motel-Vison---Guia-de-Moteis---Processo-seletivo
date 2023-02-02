@@ -37,3 +37,19 @@ function trocarSuite(sentido) {
     carousel.children[carouselAux].classList.add("suitesActive")
     carousel.style.transform = transform
 }
+function verificarHeader() {
+    const body = document.querySelector("body").getBoundingClientRect()
+    if (-body.top > (window.innerHeight - 100)) {
+        document.getElementById("header-mobile").style.position = "fixed"
+        document.getElementById("header-mobile").style.top = "0px"
+    } else {
+        document.getElementById("header-mobile").style.position = "absolute"
+        document.getElementById("header-mobile").style.top = "calc(100vh - 100px)"
+    }
+    const header = document.querySelector("header")
+    header.style.background = `rgb(122, 114, 102, ${(-body.top - 135) / 200})`
+    // 
+}
+function sidebar() {
+    document.getElementById("sidebar-mobile").classList.toggle("open")
+}

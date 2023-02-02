@@ -11,7 +11,41 @@
     <title>Vison Motel</title>
 </head>
 
-<body>
+<body onscroll="verificarHeader()">
+    <div id="header-mobile" class="flex-cont full-width">
+        <div>
+            <h2>MOTEL</h2>
+            <h2>VISON</h2>
+        </div>
+        <button>Reservas</button>
+        <div id="hamburguer-menu">
+            <div class="hamburger" id="hamburger-11">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+        <div>
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle" onclick="sidebar()">
+                <span></span>
+            </label>
+        </div>
+    </div>
+    <div id="sidebar-mobile" class="flex-cont column">
+        <div>
+            <h2>MOTEL</h2>
+            <h2>VISON</h2>
+        </div>
+        <a href="">Início</a>
+        <a href="">Suítes</a>
+        <a href="">O Motel</a>
+        <a href="">Cortesias</a>
+        <a href="">Localização</a>
+        <a href="">Contato</a>
+    </div>
+    </div>
+
     <header class="flex-cont full-width">
         <div>
             <h2>MOTEL</h2>
@@ -28,9 +62,11 @@
         <button>Reservas</button>
     </header>
     <div id="main" class="flex-cont column full-width">
-        <img src="./Imagens/main.png">
+        <div class="main-img">
+            <!-- <img src="./Imagens/main.png"> -->
+        </div>
         <div>
-            <label>Bem vindo ao </label>
+            <p>Bem vindo ao </p>
             <h1>Vison Motel</h1>
         </div>
         <div class="flex-cont">
@@ -46,7 +82,7 @@
                 <div class="flex-cont">
                     <span class="flex-cont" onclick="trocarSuite('left')"><i
                             class="fa-solid fa-chevron-left fa-2x"></i></span>
-                    <img src="./Imagens/suite1.png">
+                    <div class="suite1"></div>
                     <span class="flex-cont" onclick="trocarSuite('right')"><i
                             class="fa-solid fa-chevron-right fa-2x"></i></span>
                 </div>
@@ -66,7 +102,7 @@
                 <div class="flex-cont">
                     <span class="flex-cont" onclick="trocarSuite('left')"><i
                             class="fa-solid fa-chevron-left fa-2x"></i></span>
-                    <img src="./Imagens/suite2.png">
+                    <div class="suite2"></div>
                     <span class="flex-cont" onclick="trocarSuite('right')"><i
                             class="fa-solid fa-chevron-right fa-2x"></i></span>
                 </div>
@@ -86,7 +122,7 @@
                 <div class="flex-cont">
                     <span class="flex-cont" onclick="trocarSuite('left')"><i
                             class="fa-solid fa-chevron-left fa-2x"></i></span>
-                    <img src="./Imagens/suite3.png">
+                    <div class="suite3"></div>
                     <span class="flex-cont" onclick="trocarSuite('right')"><i
                             class="fa-solid fa-chevron-right fa-2x"></i></span>
                 </div>
@@ -116,8 +152,11 @@
                 uma jaula ao redor da cama. <br><br>
 
                 Hospede-se e aproveite ainda nosso delicioso café da manhã, servido todos os dias para pernoites!</p>
+            <button>Saiba mais</button>
         </div>
-        <img src="./Imagens/suite4.png">
+        <div>
+
+        </div>
     </div>
     <div id="cortesias-container" class="flex-cont full-width">
         <h2>Cortesias</h2>
@@ -170,7 +209,7 @@
             </div>
         </div>
     </div>
-    <div id="pre-footer" class="flex-cont">
+    <div id="pre-footerDesktop" class="flex-cont">
         <div class="flex-cont column">
             <h2>MOTEL</h2>
             <h2>VISON</h2>
@@ -193,9 +232,31 @@
             <p>contato@motelvison.com</p>
         </div>
     </div>
-    <footer class="flex-cont"><a href="https://www.guiademoteis.com.br/porto-alegre" target="_blank">guia de motéis
+    <div id="pre-footerMobile" class="flex-cont column">
+        <div class="flex-cont column">
+            <h2>MOTEL</h2>
+            <h2>VISON</h2>
+            <br><br>
+            <hr>
+            <button class="footerBotao1">
+                Reservas
+            </button>
+            <button class="footerBotao1">
+                Ver suítes
+            </button>
+            <button class="footerBotao2">
+                Whatsapp
+            </button>
+            <button class="footerBotao2">
+                Contato
+            </button>
+        </div>
+    </div>
+    <footer class="flex-cont">
+        <a href="https://www.guiademoteis.com.br/porto-alegre" target="_blank">guia de motéis
             sites │ guia de
-            motéis ©</a></footer>
+            motéis ©</a>
+    </footer>
 </body>
 
 </html>

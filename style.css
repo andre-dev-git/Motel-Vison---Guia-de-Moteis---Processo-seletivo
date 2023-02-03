@@ -53,7 +53,7 @@ header {
     z-index: 2;
     top: 0%;
     justify-content: space-around !important;
-    height: 110px;
+    height: 90px;
     color: #EEEEEE;
 }
 
@@ -431,7 +431,7 @@ h2 {
 }
 
 #localizacao div {
-    width: 600px;
+    width: 400px;
 }
 
 #localizacao button {
@@ -447,9 +447,9 @@ h2 {
 }
 
 #localizacao iframe {
-    width: 900px;
+    width: 600px;
     max-width: 90vw;
-    height: 400px;
+    height: 300px;
 }
 
 #pre-footerMobile {

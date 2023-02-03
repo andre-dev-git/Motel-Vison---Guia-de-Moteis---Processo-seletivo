@@ -401,8 +401,9 @@ h2 {
 .cortesia-text {
     height: 40%;
     color: var(--marron-escuro);
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
+    flex-wrap: nowrap
 }
 
 .cortesia-text h3 {
@@ -529,8 +530,9 @@ footer {
     position: absolute;
     top: calc(100vh - 100px);
     background-color: #2A2A2A;
-    justify-content: center;
+    justify-content: space-evenly;
     z-index: 3;
+    width: 100vw;
 }
 
 #header-mobile button {

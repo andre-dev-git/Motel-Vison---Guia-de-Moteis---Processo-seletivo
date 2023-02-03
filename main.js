@@ -31,7 +31,7 @@ function trocarSuite(sentido) {
             var transform = `translate(0px, 0px)`
             break
         case 2:
-            var transform = `translate(-${suiteWidth.width + 200}px, 0px)`
+            var transform = `translate(-${suiteWidth.width + 140}px, 0px)`
             break
     }
     carousel.children[carouselAux].classList.add("suitesActive")

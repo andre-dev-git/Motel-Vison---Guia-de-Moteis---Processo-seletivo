@@ -25,7 +25,7 @@ function trocarSuite(sentido) {
     }
     switch (carouselAux) {
         case 0:
-            var transform = `translate(${suiteWidth.width + 200}px, 0px)`
+            var transform = `translate(${suiteWidth.width + 140}px, 0px)`
             break
         case 1:
             var transform = `translate(0px, 0px)`

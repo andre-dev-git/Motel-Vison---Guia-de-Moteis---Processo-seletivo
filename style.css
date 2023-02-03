@@ -648,7 +648,18 @@ footer {
 .open {
     left: 0vw !important;
 }
+@media screen and (max-width: 900px) {
+    #main button:nth-child(1) {
+        padding: 10px 30px;
+    }
+    #main button:nth-child(2) {
+        padding: 10px 30px;
+    }
+    #o-motel p {
+        font-size: 13px;
+    }
 
+}
 @media screen and (max-width: 900px) {
     #pre-footerDesktop {
         flex-direction: column;
